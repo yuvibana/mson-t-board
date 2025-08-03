@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+:root {
+    --primary-blue: #3A86FF;
+    --primary-dark: #1A1A1A;
+    --white: #FFFFFF;
+    --light-gray: #F5F6FA;
+    --gray: #D3D4DA;
+    --dark-gray: #8D8E93;
+    --black: #000000;
+}
+
+.primary__blue {
+    color: var(--primary-blue);
+}
+
+.bg__primary__blue {
+    background: var(--primary-blue);
+}
+
+body {
+    background: rgb(234 242 252);
+}
