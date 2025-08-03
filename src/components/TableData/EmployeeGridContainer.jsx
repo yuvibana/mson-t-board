@@ -8,20 +8,21 @@ export default function EmployeeGridContainer() {
     const { items, total, status, error } = useSelector(state => state.employees);
 
     const [columnDefs] = useState([
-        { field: 'id', sortable: true, filter: true },
-        { field: 'title', sortable: true, filter: true, editable: true },
-        { field: 'category', sortable: true, filter: true, editable: true },
+        { field: 'id', sortable: true, filter: false },
+        { field: 'title', sortable: true, filter: true, },
+        { field: 'category', sortable: true, filter: true },
         {
-            field: 'rating', sortable: true, filter: true, editable: true,
-            cellClass: params => params.value > 3 ? 'text-green-500' : 'text-red-500'
+            field: 'rating', sortable: true, filter: true,
+            cellClass: params => params.value > 3 ? 'text-green-500' : 'text-orange-500'
         },
-        { field: 'price', sortable: true, filter: true, editable: true },
-        { field: 'stock', sortable: true, filter: true, editable: true },
+        { field: 'price', sortable: true, filter: true },
+        { field: 'stock', sortable: true, filter: true },
     ]);
 
 
     const datasource = {
         getRows: async ({ startRow, endRow, successCallback, failCallback }) => {
+            
             const cachedRows = [];
             let allCached = true;
 

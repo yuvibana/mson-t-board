@@ -18,7 +18,7 @@ export default function GraphContainer() {
         dispatch(fetchGraphData())
     }, [])
 
-    if (loading) return <p>Loading bar chart...</p>;
+    if (loading) return <p>Loading charts...</p>;
 
     return (
         <div className='charts__devider pt-10'>
